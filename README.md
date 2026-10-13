@@ -18,8 +18,9 @@ I then tested log-linear regression, K-nearest neighbors, random forests, and an
 I used the alkane dataset in PyCharm to explore missing values. Removing incomplete rows left only 100 of 250 records, so 60% of the data was lost. I tried mean imputation, then compared log-linear regression, KNN, random forests, and an ensemble using MAE.
 Log-linear regression performed best for viscosity and thermal conductivity, while the depth-15 random forest performed best for heat capacity on my test split. I used these models to fill the missing values for those three properties and saved the results, imputation flags, and a correlation heatmap. This helped me understand why deleting data can be costly and why estimated values should be clearly marked.
 My code and outputs are in Chapter 7 AlkaneAnalysis. This is my Python analysis of the CobberImpute concepts, separate from MakingDataWhole.
-# Chapter 8 - Error Metrics
-Chapter 8 — Error Metrics
-
+## Chapter 8 - Error Metrics
 I completed the CobberLearnChem activity for Chapter 8, but realized I had forgotten to complete the separate Error Metrics assignment. I went back and completed it in PyCharm, calculating MAE, MSE, and R² with NumPy and checking them against scikit-learn. The results matched. I created predicted-versus-actual and residual plots, added a readable values table, and highlighted the largest errors.
 I also compared the four Chapter 8 datasets in Python. Low scatter performed best, while high scatter had the largest errors. The deviation plots helped me understand that a high R² can still hide systematic prediction errors. My code, datasets, metrics table, and plots are saved on GitHub in the Error Metrics folder.
+## DecisionTreeClassifier 
+I completed the Python solubility project using the 12 molecules provided in the workbook. I trained a decision tree using molecular weight, hydrogen bond donors, and hydrogen bond acceptors, then saved a labeled tree image.
+I added colored nodes and readable text, and compared the original tree with one limited to depth 2. Training accuracy dropped from 100% to 83.3%, showing how a simpler tree can miss patterns. These accuracies describe the training data, not new molecules. My code and both tree images are in DecisionTreeClassifier.
