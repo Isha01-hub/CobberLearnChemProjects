@@ -18,8 +18,12 @@ I then tested log-linear regression, K-nearest neighbors, random forests, and an
 I used the alkane dataset in PyCharm to explore missing values. Removing incomplete rows left only 100 of 250 records, so 60% of the data was lost. I tried mean imputation, then compared log-linear regression, KNN, random forests, and an ensemble using MAE.
 Log-linear regression performed best for viscosity and thermal conductivity, while the depth-15 random forest performed best for heat capacity on my test split. I used these models to fill the missing values for those three properties and saved the results, imputation flags, and a correlation heatmap. This helped me understand why deleting data can be costly and why estimated values should be clearly marked.
 My code and outputs are in Chapter 7 AlkaneAnalysis. This is my Python analysis of the CobberImpute concepts, separate from MakingDataWhole.
-# Chapter 8 - Error Metrics
-Chapter 8 — Error Metrics
-
+## Chapter 8 - Error Metrics
 I completed the CobberLearnChem activity for Chapter 8, but realized I had forgotten to complete the separate Error Metrics assignment. I went back and completed it in PyCharm, calculating MAE, MSE, and R² with NumPy and checking them against scikit-learn. The results matched. I created predicted-versus-actual and residual plots, added a readable values table, and highlighted the largest errors.
 I also compared the four Chapter 8 datasets in Python. Low scatter performed best, while high scatter had the largest errors. The deviation plots helped me understand that a high R² can still hide systematic prediction errors. My code, datasets, metrics table, and plots are saved on GitHub in the Error Metrics folder.
+## Chapter 9 - DecisionTreeClassifier 
+I completed the Python solubility project using the 12 molecules provided in the workbook. I trained a decision tree using molecular weight, hydrogen bond donors, and hydrogen bond acceptors, then saved a labeled tree image.
+I added colored nodes and readable text, and compared the original tree with one limited to depth 2. Training accuracy dropped from 100% to 83.3%, showing how a simpler tree can miss patterns. These accuracies describe the training data, not new molecules. My code and both tree images are in DecisionTreeClassifier.
+## Chapter 10 - ElementClustering
+I collected Group 1 atomic radii and first ionization energies from the Royal Society of Chemistry and saved the data with source links. I plotted the trend, standardized the two features, and used KMeans to form clusters with black Xs marking their centers. I also added a loop to try different cluster counts.
+With two clusters, lithium and sodium grouped together, while the other four alkali metals formed the second group. With three clusters, the groups were Li–Na, K–Rb, and Cs–Fr. I repeated the analysis with Group 2, where beryllium and magnesium grouped separately from calcium, strontium, barium, and radium. This helped me see how the selected properties and cluster count affect the grouping.
