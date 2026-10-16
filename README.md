@@ -29,19 +29,9 @@ I collected Group 1 atomic radii and first ionization energies from the Royal So
 With two clusters, lithium and sodium grouped together, while the other four alkali metals formed the second group. With three clusters, the groups were Li–Na, K–Rb, and Cs–Fr. I repeated the analysis with Group 2, where beryllium and magnesium grouped separately from calcium, strontium, barium, and radium. This helped me see how the selected properties and cluster count affect the grouping.
 ## RESEARCH PROJECT: ESTROGEN_ANTAGONIST
 1. EXPLAIN THE BLA ASSAY MECHANISM
-- Beta-Lactamase(BLA) is an enzyme sued as an reporter. A reporter produces a measurable signal that tells the researcher weather a biological process is happening. In this assay, the researchers use genetically engineered human kidney cells called HEK293 cells. These cells contain:
- i. The ligand-binding domain of estrogen receptor alpha (ERα) which is the part that interacts with estrogen and other molecules.
- ii. A GAL4 DNA-binding domain attached to it.
- iii. A reporter gene that produces beta-lactamase when the engineered receptor system is activated.
-This is an engineered model of receptor-dependent gene activation, rather than the complete natural estrogen pathway in a breast or ovarian cell.
-Here's how the measurement works:
-i. Estrogen activates the receptor system, causing the cells to produce beta-lactamase.
-ii. Researchers add a fluorescent substrate which is a molecule beta-lactamase is able to cut.
-iii. Cutting the substrate changes its fluorescence from predominantly green to blue.
-iv. The instrument measures the blue-to-green fluorescence ratio, approximately 460/530 nm.
-v. In antagonist mode, researchers add the test chemical together with estrogen. A chemical that inhibits the system reduces the estrogen-induced fluorescence ratio compared with estrogen alone. 
-Basically, estrogen turns on a biological switch connected to a color-changing reporter. Researchers look for chemicals that turn down that estrogen-induced signal.
-The paired viability assay checks whether the chemical harms the cells. In the published Tox21 ERα-BLA protocol, viability was measured using an ATP-based CellTiter-Glo assay. This matters because unhealthy cells can produce less reporter signal even without specific estrogen receptor antagonism.
+- BLA stands for beta-lactamase, which is an enzyme used as a reporter to measure estrogen receptor activity. In the estrogen receptor alpha BLA assay, researchers use genetically modified HEK293 cells. These cells contain the estrogen-binding portion of the receptor attached to a GAL4 DNA-binding domain. When this system is activated, it turns on a reporter gene that produces beta-lactamase.
+Beta-lactamase cuts a fluorescent substrate, changing its signal from green toward blue. The assay measures the ratio of blue to green fluorescence. In antagonist mode, the cells are exposed to estrogen and a test chemical together. If the chemical interferes with estrogen-induced receptor activity, the cells produce less beta-lactamase, which lowers the fluorescence ratio compared with estrogen alone.
+A separate viability measurement helps determine whether the reduced signal could be caused by cell damage. This is important because a chemical that harms the cells could lower the reporter signal without specifically blocking the estrogen receptor.
 
 2. WHAT PART OF THE PATHWAY DOES AN ACTIVE MOLECULE DISRUPT?
    - The intended point of disruption is estrogen receptor activation and the gene transcription that follows. A true antagonist can interact with the receptors' ligand-binding region and prevent estrogen from fully activating it. In the BLA assay, this reduces reporter gene activity and lowers the fluorescence ratio. The assay therefore looks at interference with the cell’s response to estrogen rather than interference with estrogen production.
