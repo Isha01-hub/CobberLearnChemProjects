@@ -35,11 +35,11 @@ With two clusters, lithium and sodium grouped together, while the other four alk
  iii. A reporter gene that produces beta-lactamase when the engineered receptor system is activated.
 This is an engineered model of receptor-dependent gene activation, rather than the complete natural estrogen pathway in a breast or ovarian cell.
 Here's how the measurement works:
-1. Estrogen activates the receptor system, causing the cells to produce beta-lactamase.
-2. Researchers add a fluorescent substrate which is a molecule beta-lactamase is able to cut.
-3. Cutting the substrate changes its fluorescence from predominantly green to blue.
-4. The instrument measures the blue-to-green fluorescence ratio, approximately 460/530 nm.
-5. In antagonist mode, researchers add the test chemical together with estrogen. A chemical that inhibits the system reduces the estrogen-induced fluorescence ratio compared with estrogen alone. 
+i. Estrogen activates the receptor system, causing the cells to produce beta-lactamase.
+ii. Researchers add a fluorescent substrate which is a molecule beta-lactamase is able to cut.
+iii. Cutting the substrate changes its fluorescence from predominantly green to blue.
+iv. The instrument measures the blue-to-green fluorescence ratio, approximately 460/530 nm.
+v. In antagonist mode, researchers add the test chemical together with estrogen. A chemical that inhibits the system reduces the estrogen-induced fluorescence ratio compared with estrogen alone. 
 Basically, estrogen turns on a biological switch connected to a color-changing reporter. Researchers look for chemicals that turn down that estrogen-induced signal.
 The paired viability assay checks whether the chemical harms the cells. In the published Tox21 ERα-BLA protocol, viability was measured using an ATP-based CellTiter-Glo assay. This matters because unhealthy cells can produce less reporter signal even without specific estrogen receptor antagonism.
 
