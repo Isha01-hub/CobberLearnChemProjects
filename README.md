@@ -36,10 +36,10 @@ A separate viability measurement helps determine whether the reduced signal coul
 2. WHAT PART OF THE PATHWAY DOES AN ACTIVE MOLECULE DISRUPT?
    - The intended point of disruption is estrogen receptor activation and the gene transcription that follows. A true antagonist can interact with the receptors' ligand-binding region and prevent estrogen from fully activating it. In the BLA assay, this reduces reporter gene activity and lowers the fluorescence ratio. The assay therefore looks at interference with the cell’s response to estrogen rather than interference with estrogen production.
    - However, an active result does not prove that the chemical directly binds to the estrogen receptor. Chemicals can also interfere with the reporter system or the fluorescence measurement. Additional testing is needed to confirm the exact mechanism. In our dataset, the chemicals were classified as active in the BLA ratio assay and inactive in the paired viability assay. This makes them candidates for further investigation rather than confirmed estrogen antagonists.
-   3.  How does the assay apply to women’s health?
+3. How does the assay apply to women’s health?
     - This assay is relevant to women’s health because estrogen signaling is important for reproductive function and hormone-responsive tissues. Screening chemicals for interference with estrogen receptors can help researchers identify substances that need further study for possible effects on fertility, pregnancy, and reproductive health.
     - The assay is also useful in breast cancer research. Some breast cancers depend on estrogen signaling for growth, so blocking that signaling can be helpful. For example, tamoxifen blocks estrogen’s effects in breast tissue. Studying estrogen antagonists can therefore support both environmental health research and drug discovery. However, activity in this assay alone does not show that a chemical is harmful to women or that it would be a safe cancer treatment.
-   4. Explain what each column in the dataset represents.
+4. Explain what each column in the dataset represents.
   - The dataset contains chemical identification information, chemical structure information, and assay results. The suffix BLA_Ratio identifies the receptor-related reporter endpoint, while BLA_Viability identifies the paired cell viability endpoint. Columns with the same measurement name are explained together below:
 i. DTXSID
 A unique substance identifier used in EPA’s chemical database. It helps match the same substance across datasets.
