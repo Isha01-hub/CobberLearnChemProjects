@@ -27,3 +27,59 @@ I added colored nodes and readable text, and compared the original tree with one
 ## Chapter 10 - ElementClustering
 I collected Group 1 atomic radii and first ionization energies from the Royal Society of Chemistry and saved the data with source links. I plotted the trend, standardized the two features, and used KMeans to form clusters with black Xs marking their centers. I also added a loop to try different cluster counts.
 With two clusters, lithium and sodium grouped together, while the other four alkali metals formed the second group. With three clusters, the groups were Li–Na, K–Rb, and Cs–Fr. I repeated the analysis with Group 2, where beryllium and magnesium grouped separately from calcium, strontium, barium, and radium. This helped me see how the selected properties and cluster count affect the grouping.
+## RESEARCH PROJECT: ESTROGEN_ANTAGONIST
+1. EXPLAIN THE BLA ASSAY MECHANISM
+- Beta-Lactamase(BLA) is an enzyme sued as an reporter. A reporter produces a measurable signal that tells the researcher weather a biological process is happening. In this assay, the researchers use genetically engineered human kidney cells called HEK293 cells. These cells contain:
+ i. The ligand-binding domain of estrogen receptor alpha (ERα) which is the part that interacts with estrogen and other molecules.
+ ii. A GAL4 DNA-binding domain attached to it.
+ iii. A reporter gene that produces beta-lactamase when the engineered receptor system is activated.
+This is an engineered model of receptor-dependent gene activation, rather than the complete natural estrogen pathway in a breast or ovarian cell.
+Here's how the measurement works:
+1. Estrogen activates the receptor system, causing the cells to produce beta-lactamase.
+2. Researchers add a fluorescent substrate which is a molecule beta-lactamase is able to cut.
+3. Cutting the substrate changes its fluorescence from predominantly green to blue.
+4. The instrument measures the blue-to-green fluorescence ratio, approximately 460/530 nm.
+5. In antagonist mode, researchers add the test chemical together with estrogen. A chemical that inhibits the system reduces the estrogen-induced fluorescence ratio compared with estrogen alone. 
+Basically, estrogen turns on a biological switch connected to a color-changing reporter. Researchers look for chemicals that turn down that estrogen-induced signal.
+The paired viability assay checks whether the chemical harms the cells. In the published Tox21 ERα-BLA protocol, viability was measured using an ATP-based CellTiter-Glo assay. This matters because unhealthy cells can produce less reporter signal even without specific estrogen receptor antagonism.
+
+2. WHAT PART OF THE PATHWAY DOES AN ACTIVE MOLECULE DISRUPT?
+   - The intended point of disruption is estrogen receptor activation and the gene transcription that follows. A true antagonist can interact with the receptors' ligand-binding region and prevent estrogen from fully activating it. In the BLA assay, this reduces reporter gene activity and lowers the fluorescence ratio. The assay therefore looks at interference with the cell’s response to estrogen rather than interference with estrogen production.
+   - However, an active result does not prove that the chemical directly binds to the estrogen receptor. Chemicals can also interfere with the reporter system or the fluorescence measurement. Additional testing is needed to confirm the exact mechanism. In our dataset, the chemicals were classified as active in the BLA ratio assay and inactive in the paired viability assay. This makes them candidates for further investigation rather than confirmed estrogen antagonists.
+   3.  How does the assay apply to women’s health?
+    - This assay is relevant to women’s health because estrogen signaling is important for reproductive function and hormone-responsive tissues. Screening chemicals for interference with estrogen receptors can help researchers identify substances that need further study for possible effects on fertility, pregnancy, and reproductive health.
+    - The assay is also useful in breast cancer research. Some breast cancers depend on estrogen signaling for growth, so blocking that signaling can be helpful. For example, tamoxifen blocks estrogen’s effects in breast tissue. Studying estrogen antagonists can therefore support both environmental health research and drug discovery. However, activity in this assay alone does not show that a chemical is harmful to women or that it would be a safe cancer treatment.
+   4. Explain what each column in the dataset represents.
+  - The dataset contains chemical identification information, chemical structure information, and assay results. The suffix BLA_Ratio identifies the receptor-related reporter endpoint, while BLA_Viability identifies the paired cell viability endpoint. Columns with the same measurement name are explained together below:
+DTXSID
+A unique substance identifier used in EPA’s chemical database. It helps match the same substance across datasets.
+PREFERRED NAME
+The chemical name selected by the source database.
+CASRN
+The chemical’s CAS Registry Number, which is used to identify the substance.
+MOLECULAR FORMULA
+Shows the elements and number of each type of atom in the chemical. It does not show how the atoms are connected.
+MONOISOTOPIC MASS
+The calculated molecular mass using the principal isotope of each element, usually expressed in daltons.
+SMILES
+A text representation of the chemical’s molecular structure, including atom connections and bond types.
+Morgan_Fingerprint
+A computer-generated summary of molecular structure. In this dataset, each fingerprint contains 2,048 zeros and ones. These fingerprints can be used to compare structures or build prediction models.
+TOXCAST ACTIVE_BLA_Ratio and TOXCAST ACTIVE_BLA_Viability
+These appear to represent the overall number of ToxCast assay endpoints in which the chemical was classified as active. The values are identical between the two versions, suggesting that they are chemical-level summaries copied from the source files.
+TOXCAST TOTAL_BLA_Ratio and TOXCAST TOTAL_BLA_Viability
+These appear to represent the total number of ToxCast assay endpoints with results for the chemical. They are also identical between the two versions.
+% TOXCAST ACTIVE_BLA_Ratio and % TOXCAST ACTIVE_BLA_Viability
+The percentage of the chemical’s ToxCast endpoints classified as active, calculated approximately as active endpoints divided by total endpoints, multiplied by 100. This is not the percentage of estrogen receptor inhibition.
+HIT CALL_BLA_Ratio and HIT CALL_BLA_Viability
+The final activity classification for each endpoint: Active or Inactive. All 792 chemicals in this dataset are Active in the ratio endpoint and Inactive in the viability endpoint.
+CONTINUOUS HIT CALL_BLA_Ratio and CONTINUOUS HIT CALL_BLA_Viability
+Numerical scores that support the activity classification using the concentration–response data and model fit. They do not measure percent inhibition. Some viability scores are negative, so their exact interpretation depends on the source’s scoring convention.
+TOP_BLA_Ratio and TOP_BLA_Viability
+The modeled response amplitude from the best-fitting concentration–response curve. Negative values can represent a decrease in the measured signal relative to the reference. TOP is a response measurement, not a concentration.
+SCALED TOP_BLA_Ratio and SCALED TOP_BLA_Viability
+The modeled response scaled relative to the assay’s activity cutoff. This makes results from endpoints with different response scales easier to compare.
+AC50_BLA_Ratio and AC50_BLA_Viability
+The estimated concentration producing 50% of the modeled maximal response. For reliable active responses within the same assay, a lower AC50 generally indicates greater potency. ToxCast commonly reports these values in micromolar units, but the original export should be checked to confirm the units.
+LOGAC50_BLA_Ratio and LOGAC50_BLA_Viability
+The base-10 logarithm of AC50. This puts concentrations on a scale that is easier to compare and graph. For example, an AC50 of 10 corresponds to a LOGAC50 of 1.
