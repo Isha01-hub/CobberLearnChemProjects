@@ -1,0 +1,6 @@
+# Python cache files
+__pycache__/
+*.pyc
+
+# Saved model: regenerate by running housing_regression.py
+outputs/*.joblib

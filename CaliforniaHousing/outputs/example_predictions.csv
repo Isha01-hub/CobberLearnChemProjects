@@ -1,0 +1,4 @@
+MedInc,HouseAge,AveRooms,AveBedrms,Population,AveOccup,Latitude,Longitude,Predicted Median Value ($)
+3.0,25,5.0,1.0,1500,3.0,34.05,-118.25,187333.00000000003
+5.0,25,5.0,1.0,1500,3.0,34.05,-118.25,220304.0
+7.0,25,5.0,1.0,1500,3.0,34.05,-118.25,360173.1499999999
