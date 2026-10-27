@@ -74,3 +74,25 @@ The estimated concentration producing 50% of the modeled maximal response. For r
  xvi. LOGAC50_BLA_Ratio and LOGAC50_BLA_Viability
 The base-10 logarithm of AC50. This puts concentrations on a scale that is easier to compare and graph. For example, an AC50 of 10 corresponds to a LOGAC50 of 1.
 -  EPA's documentation describes TOP and scaled responses measurements and on the other hand the ToxCast pipeline publication explains the continuous hit calls and AC50 values. The combined dataset contains 792 chemical records, but only 396 have SMILES and Morgan Fingerprints. Also, the viability AC50 values should not be treated as confirmed toxicity concentrations because the viability responses were classified as inactive. Potency estimates from inactive curves are generally not informative. 
+## Chapter 16: California Housing Price Prediction
+## Interactive app
+https://cobberlearnchemprojects-agwcsmtkaqhcbe8vkdur5u.streamlit.app/ 
+## Project Overview
+The california housing project compares four regression models using dataset provided specifically for California houses: Linear Regress, Decision Tree, Random Forest, nad Support Vector Regressor. 
+The data was split into 80% for training and 20% for testing. 
+After training all four models, Random Forest performed the best on the test set, with the R^2 of 0.8046 and a mean absolute error of 0.3277 in $100,000 units and approximately $32,773. Median income had the strongest positive linear correlation with median house value. 
+## Files
+- 'app.py' : interactive web app.
+- 'housing_regression.py' : data exploration, model comparison, graphs, and terminal predictions.
+- 'housing_gui.py' : desktop prediction interface.
+- 'outputs/' : model results, example predictions, and graphs.
+- 'requirements.txt': required python libraries.
+## Running locally 
+From the repository folder, install the libraires and start the web app: 
+```bash
+python -m pip install -r CaliforniaHousing/requirements.txt
+python -m streamlit run CaliforniaHousing/app.py
+```
+The app downloads the dataset and trains the model when it starts, so the first load requires an internet connection.
+## Limitations
+The dataset describes california census block group from 1990. Predictions are educaitonal estimates of median house values, not current market prices or apprisals for individual homes. Changing an input shows how the model responds; it does not establishes a cause-and effect relationship.
