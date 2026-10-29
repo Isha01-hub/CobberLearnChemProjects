@@ -96,3 +96,39 @@ python -m streamlit run CaliforniaHousing/app.py
 The app downloads the dataset and trains the model when it starts, so the first load requires an internet connection.
 ## Limitations
 The dataset describes california census block group from 1990. Predictions are educaitonal estimates of median house values, not current market prices or apprisals for individual homes. Changing an input shows how the model responds; it does not establishes a cause-and effect relationship.
+## Chapter 17: Iris Clustering — From Petals to Patterns
+This project applies K-means clustering to 150 Iris flowers using four measurements: sepal length, sepal width, petal length, and petal width. These numerical features describe each flower, just as distance, angle, and energy describe molecular interactions in the CobberHbond lab.
+### Method
+The clustering model received only the four measurement columns. Species labels were kept separate and used afterward to evaluate the clusters. The dataset had no missing values. I used three clusters because the dataset contains three known species. However, the model was not given each flower's species. K-means used fit_predict() to find cluster centers and assign each flower to a group
+based on its distance from those centers. Choosing a different number, such as seven, would ask the algorithm to divide the flowers into more groups. Those groups would not necessarily represent additional species. The script allows users to choose another cluster count without editing the code.
+### Results
+Setosa formed a clearly separated group with short, narrow petals. Versicolor and virginica overlapped, so their cluster assignments did not perfectly match their species.
+Species percentages within each cluster using raw features:
+| Cluster | Setosa | Versicolor | Virginica |
+|---|---:|---:|---:|
+| 0 | 0.00% | 77.42% | 22.58% |
+| 1 | 100.00% | 0.00% | 0.00% |
+| 2 | 0.00% | 5.26% | 94.74% |
+
+Each row describes the composition of one cluster and totals approximately 100%. As an enhancement, I compared raw features with features normalized to a range of 0 to 1.
+
+| Features | Number of clusters | Adjusted Rand Index |
+|---|---:|---:|
+| Raw | 3 | 0.7302 |
+| Normalized | 3 | 0.7163 |
+Normalization slightly reduced agreement with the species grouping in this run. It changes the relative influence of the features and does
+not guarantee better results. ARI measures agreement between groupings; it is not a percentage accuracy.
+### Visualizations and Interpretation
+The plots show petal length versus petal width, colored by either cluster assignment or actual species. K-means used all four features, even though the plots display only two.
+Coloring by actual species reveals some differences from the cluster assignments, especially where versicolor and virginica overlap.
+Cluster numbers and colors are arbitrary and do not identify species by themselves.
+If the measurements showed no clear grouping, the plot could look more mixed without distinct gaps. K-means would still produce the requested number of clusters, so the existence of clusters alone does not prove that they are meaningful.
+### Connection to Chemistry
+Both this project and the hydrogen-bonding lab use unsupervised learning to group observations by numerical features without giving the model the answers. We then interpret the groups using outside knowledge. In the molecular lab, Cluster 1 stood out because its prominent pairs combined O–H or N–H donors with O or N acceptors. Its heatmap also showed a focused region at a preferred separation and direction. In the Iris project, the known species provided a way to check whether the groups
+were meaningful.
+I learned that clustering can reveal useful patterns without labels, but interpreting and validating those patterns still requires judgment. The 150 Iris samples were enough to show visible patterns in this dataset, although this does not guarantee generalization to all flowers.
+### Running the Project
+From the repository's main folder: python -m pip install pandas scikit-learn matplotlib
+python Clustering/iris_clustering.py
+The script saves plots, cluster assignments, species counts, species percentages, summary statistics, and comparison results in
+Clustering/outputs. Press Enter at the optional cluster-count prompt to finish, or enter a whole number from 2 to 10 to explore another k.
